@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Victopia Labs URL Page!!!</h1>
+
+<form action="{% url 'get_code' %}" method="post">
+    {% csrf_token %}
+    
+    Enter Url: <input type="text" name="url" required><br> 
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}
